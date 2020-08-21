@@ -37,7 +37,10 @@ def getWeatherForecast():
                 temperature.append(obj['temperature'])
     
     output = ", ".join(str(temp) for temp in temperature)
-    print(output)
+
+    # write out the results
+    forecast_output = open("temperature.txt", "w")
+    forecast_output.write(output)
 
 
 getWeatherForecast()
